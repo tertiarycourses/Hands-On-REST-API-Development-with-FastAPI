@@ -16,7 +16,7 @@ curl ADDRESS -H "X-Github-Token: TOKEN"
 """
 
 if __name__ == "__main__":
-    token = "ghu_zYd02NM6xRrHf1MSUWr6hwOUrPULqq0sa3Pq"
+    token = "insert results of echo $GITHUB_TOKEN here"
     headers = {"X-GitHub-Token": token}
     # -----TEST USING REQUESTS-----
     r = requests.get(
