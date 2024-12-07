@@ -8,7 +8,7 @@ You can find your session token using this command in the terminal:
 ```
 echo $GITHUB_TOKEN
 ```
-The tolen always starts with ghu_
+The token always starts with ghu_
 We can then use curl to access it with the token:
 ```
 curl ADDRESS -H "X-Github-Token: TOKEN"
@@ -16,11 +16,11 @@ curl ADDRESS -H "X-Github-Token: TOKEN"
 """
 
 if __name__ == "__main__":
-    token = "insert results of echo $GITHUB_TOKEN here"
+    token = "ghu_rI3gjCjubAtQWoj5YRzRE6NRS8HB470ARNFF"
     headers = {"X-GitHub-Token": token}
     # -----TEST USING REQUESTS-----
     r = requests.get(
-        "https://solid-acorn-9vwvj9q9gqwfgwq-8000.app.github.dev/hi",
+        "https://fuzzy-space-eureka-p6ppx676xg6f7jrp.github.dev/hi",
         headers=headers,
     )
     print("OUTPUT USING REQUESTS TEST")
@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # -----TEST USING HTTPX-----
     r = httpx.get(
-        "https://solid-acorn-9vwvj9q9gqwfgwq-8000.app.github.dev/hi",
+        "https://fuzzy-space-eureka-p6ppx676xg6f7jrp.github.dev/hi",
         headers=headers,
     )
     print("OUTPUT USING HTTPX TEST")

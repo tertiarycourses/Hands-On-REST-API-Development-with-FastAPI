@@ -1,4 +1,3 @@
-# to define the Pydantic models for request and response validation:
 from pydantic import BaseModel
 from typing import Optional, List
 from datetime import date
@@ -14,7 +13,7 @@ class Author(AuthorBase):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True  # Updated from orm_mode to from_attributes
 
 class BookBase(BaseModel):
     title: str
@@ -23,7 +22,7 @@ class BookBase(BaseModel):
     price: float
     author_id: int
     tags: Optional[str] = None
-    metadata: Optional[str] = None
+    extra_metadata: Optional[str] = None 
 
 class BookCreate(BookBase):
     pass
@@ -32,9 +31,9 @@ class Book(BookBase):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True  # Updated
 
-# authentication classes
+# Authentication classes
 class Token(BaseModel):
     access_token: str
     token_type: str
@@ -53,4 +52,4 @@ class User(UserBase):
     is_active: bool
 
     class Config:
-        orm_mode = True
+        from_attributes = True  # Updated

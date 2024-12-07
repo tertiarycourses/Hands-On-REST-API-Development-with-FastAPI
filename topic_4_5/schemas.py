@@ -23,7 +23,7 @@ class BookBase(BaseModel):
     price: float
     author_id: int
     tags: Optional[str] = None
-    metadata: Optional[str] = None
+    extra_metadata: Optional[str] = None  # Renamed from 'metadata'
 
 class BookCreate(BookBase):
     pass

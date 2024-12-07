@@ -4,7 +4,7 @@ import uvicorn
 app = FastAPI()
 
 @app.get("/hi/{name}")
-def greet(name: str, greeting: str = Query(...)):
+def greet(name: str, greeting: str = Query("...")):
     return {"message": f"{greeting}, {name}!"}
 
 """

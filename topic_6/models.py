@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy import Column, Integer, String, Boolean, Date, Float
 from .database import Base
 
 class User(Base):
@@ -26,4 +26,4 @@ class Book(Base):
     price = Column(Float)
     author_id = Column(Integer)
     tags = Column(String)
-    metadata = Column(String)
+    extra_metadata = Column(String) 

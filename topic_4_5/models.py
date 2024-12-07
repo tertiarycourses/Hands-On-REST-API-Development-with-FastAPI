@@ -18,4 +18,4 @@ class Book(Base):
     price = Column(Float)
     author_id = Column(Integer)
     tags = Column(String)
-    metadata = Column(String)
+    extra_metadata = Column(String)  # Renamed from 'metadata'

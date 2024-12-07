@@ -33,7 +33,7 @@ def create_book(book: schemas.BookCreate, db: Session = Depends(get_db)):
         price=book.price,
         author_id=book.author_id,
         tags=book.tags,
-        metadata=book.metadata
+        extra_metadata=book.extra_metadata  # Updated from metadata to extra_metadata
     )
     db.add(db_book)
     db.commit()
@@ -109,7 +109,3 @@ Generating JWT Token: The /token endpoint generates a JWT token when the user lo
 Get Current User: The get_current_user function decodes the JWT token to get the current user.
 Protecting Routes: Use the Depends function to protect routes by requiring a valid JWT token.
 """
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("example:app", reload=True)

@@ -14,9 +14,9 @@ These routes should match any valid path parameters that do not match the specif
 """
 
 if __name__ == "__main__":
-    token = "insert results of echo $GITHUB_TOKEN here"
+    token = "ghu_dbzLzgzJ9IITk90RD5Os3Q6htjmJZT2btkDy"
     headers = {"X-GitHub-Token": token}
-    base_url = "https://solid-acorn-9vwvj9q9gqwfgwq-8000.app.github.dev"
+    base_url = "https://fuzzy-space-eureka-p6ppx676xg6f7jrp.github.dev"
 
     # -----TEST USING REQUESTS-----
     # Test specific route

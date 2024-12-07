@@ -11,7 +11,7 @@ app = FastAPI() # top-level FastAPI object that represents the whole webapp
 
 @app.get("/hi/{who}") # path decorator, indicates that a request for the URL "/hi" on this server should be directed to the following function
 def greet(who): # path function AKA main point of contact with HTTP requests and responses
-    return {"message": "{who}"} # return message in a JSON format
+    return {"message": f"Hello? {who}"} # return message in a JSON format
 
 
 """

@@ -2,12 +2,12 @@ import requests
 import httpx
 
 if __name__ == "__main__":
-    token = "insert results of echo $GITHUB_TOKEN here"
+    token = "ghu_dbzLzgzJ9IITk90RD5Os3Q6htjmJZT2btkDy"
     headers = {"X-GitHub-Token": token}
     
     # -----TEST USING REQUESTS-----
     r = requests.get(
-        "https://solid-acorn-9vwvj9q9gqwfgwq-8000.app.github.dev/hi/Mom",
+        "https://fuzzy-space-eureka-p6ppx676xg6f7jrp.github.dev/hi/Mom",
         headers=headers,
     )
     print("OUTPUT USING REQUESTS TEST")
@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     # -----TEST USING HTTPX-----
     r = httpx.get(
-        "https://solid-acorn-9vwvj9q9gqwfgwq-8000.app.github.dev/hi/Mom",
+        "https://fuzzy-space-eureka-p6ppx676xg6f7jrp.github.dev/hi/Mom",
         headers=headers,
     )
     print("OUTPUT USING HTTPX TEST")
